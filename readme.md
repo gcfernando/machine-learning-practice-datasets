@@ -1,3 +1,6 @@
+<a id="-summary"></a>
+<a id="️-recommended-learning-flow"></a>
+
 # Dataset Playground — CSV Data for Machine Learning Practice
 
 Nine CSV tables for learning data cleaning, exploratory analysis, classification and regression with Python, R or another data tool.
@@ -7,6 +10,22 @@ Nine CSV tables for learning data cleaning, exploratory analysis, classification
 Start with Iris for classification or Salary for regression, then explore missing values in Titanic and the customer, sales and sensor tables. These files provide practice inputs; the repository includes no trained models, notebooks or evaluation results.
 
 Provenance and licensing are not recorded. Treat the tables as learning material of unverified origin and read the [source and reuse notes](#source-and-reuse-notes) before redistribution.
+
+<a id="-dataset-catalog"></a>
+<a id="-dataset-playground--machine-learning-datasets-for-practice-csv"></a>
+<a id="-detailed-dataset-overview"></a>
+<a id="-size-at-a-glance"></a>
+<a id="-suggested-use-cases"></a>
+<a id="-whats-inside"></a>
+<a id="1-customer_datacsv--customer-spending-data"></a>
+<a id="2-sales_datacsv--sales-transactions"></a>
+<a id="3-reviews_datacsv--product-reviews"></a>
+<a id="4-sensor_datacsv--sensor-readings"></a>
+<a id="5-collegecsv--college-data"></a>
+<a id="6-iriscsv--iris-flower-dataset"></a>
+<a id="7-purchasecsv--purchase-decision-dataset"></a>
+<a id="8-salarycsv--experience-vs-salary"></a>
+<a id="9-titaniccsv--titanic-survival-dataset"></a>
 
 ## ✨ Features
 
@@ -23,6 +42,8 @@ Provenance and licensing are not recorded. Treat the tables as learning material
 | [sensor_data.csv](sensor_data.csv) | 1,000 | 5 | Timestamp parsing and missing sensor readings |
 
 Counts exclude the header. The first College column is unnamed and contains college names; it is included in the 19-column count. See the [schema and quality reference](documentation.md) for exact fields and empty-cell counts.
+
+<a id="-quick-start-with-pandas"></a>
 
 ## 🚀 Quick start
 
@@ -84,6 +105,8 @@ for path in sorted(Path(".").glob("*.csv")):
 
 The documentation review parsed all files to verify counts, headers and empty cells. It did not train models or verify original dataset sources.
 
+<a id="-faq"></a>
+
 ## 🛠️ Troubleshooting and limitations
 
 - **Unnamed College column:** use `index_col=0`, or assign an explicit name after import.
@@ -99,6 +122,9 @@ For a dataset addition or correction, record its source URL, author, license, co
 ## 🔒 Security
 
 Keep credentials and private records out of examples and issues. Use a private reporting option if available, or contact the maintainer privately for sensitive data concerns. No dedicated security policy is committed.
+
+<a id="-related-projects"></a>
+<a id="documentation-links"></a>
 
 ## 📄 Support and license
 
