@@ -11,7 +11,7 @@ Browse the published guides, examples and reference pages for **Machine Learning
 
 Use the [README](readme.md) for dataset selection and pandas examples. This reference records the exact columns and empty-cell counts in the committed CSV files; suggested modeling targets are exercises, not an assertion that the tables are representative or well-labeled.
 
-Empty-cell counts below include empty or whitespace-only field values, excluding headers. They do not count every possible missing-value marker or assess duplicate rows, outliers, validity or provenance.
+Empty-cell counts below include empty or whitespace-only field values, excluding headers. They do not count every possible missing-value marker. The additional checks below cover exact duplicate rows, selected numeric bounds and date parsing; they do not establish validity or provenance.
 
 | File | Rows | Columns | Empty cells |
 |---|---:|---:|---:|
@@ -71,6 +71,25 @@ Empty-cell counts below include empty or whitespace-only field values, excluding
 - Sales includes a fraud label and Reviews a sentiment label, but neither labeling methodology nor ground-truth quality is documented.
 - Sensor has timestamps, but no acquisition or sampling specification; inspect it before any forecasting exercise.
 - No generator, provenance record or license file is present. Do not infer that named or generated-looking records are proven synthetic.
+
+## 🧪 Additional full-file quality checks
+
+All records were parsed with the CSV reader. Every row has the expected field count. `Iris.csv` has **three duplicate rows beyond the first occurrence** when comparing all five fields exactly; the other eight files have no exact full-row duplicates. This does not establish whether repeated measurements are errors, and removing them should be an explicit analysis choice.
+
+In `College.csv`, one `PhD` value exceeds 100 (maximum **103**) and one `Grad.Rate` value exceeds 100 (maximum **118**). Investigate these values before interpreting those fields as percentages; this review does not correct or explain their source.
+
+Use explicit date formats instead of relying on locale inference:
+
+| File / field | Python or pandas format | Observed ordering |
+|---|---|---|
+| `customer_data.csv` / `Signup_Date` | `%m/%d/%Y` | Unsorted; 770 distinct dates |
+| `sales_data.csv` / `Transaction_Date` | `%Y-%m-%d` | Unsorted; 770 distinct dates |
+| `reviews_data.csv` / `Review_Date` | `%d-%m-%Y` | Unsorted; 552 distinct dates |
+| `sensor_data.csv` / `Timestamp` | `%Y/%m/%d %H:%M:%S` | 1,000 unique timestamps, ascending with 600 seconds between adjacent rows |
+
+Every nonempty date in each field parses with its listed format. The sensor table interleaves ten sensor IDs, so the global ten-minute spacing is not a per-sensor sampling guarantee. Group by `Sensor_ID` and inspect each series before resampling. No time-zone or measurement-unit metadata is committed.
+
+`Customer_ID` is unique in the customer table, and all sales/review customer references match an ID there. A join still needs an explicit purpose and careful feature selection: identifier consistency does not verify record provenance or predictive validity.
 
 The generated page/source navigation below is retained for the documentation site.
 

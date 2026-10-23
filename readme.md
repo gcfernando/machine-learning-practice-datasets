@@ -103,7 +103,7 @@ for path in sorted(Path(".").glob("*.csv")):
     print(path.name, len(records), len(header))
 ```
 
-The documentation review parsed all files to verify counts, headers and empty cells. It did not train models or verify original dataset sources.
+The documentation review parsed every record to verify widths, counts, headers, empty cells, exact duplicate rows, selected numeric bounds, date formats and customer-ID references. The [quality reference](documentation.md#-additional-full-file-quality-checks) records three duplicate Iris rows, College values above 100 and the different date formats. It did not train models or verify original dataset sources.
 
 <a id="-faq"></a>
 
@@ -111,6 +111,7 @@ The documentation review parsed all files to verify counts, headers and empty ce
 
 - **Unnamed College column:** use `index_col=0`, or assign an explicit name after import.
 - **Missing values:** Purchase, Titanic, customer, sales and sensor tables contain empty cells. Define a preprocessing policy before modeling.
+- **Duplicate measurements and numeric bounds:** Iris contains exact repeated rows; College contains `PhD` and `Grad.Rate` values above 100. Inspect these before fitting or cleaning rather than assuming every nonempty value is valid.
 - **Small sample:** Purchase has only ten rows and is unsuitable for reliable model evaluation.
 - **Unknown origin:** apparent generated patterns do not prove that data is synthetic. No real-world representativeness or label quality is established.
 - **Reuse rights:** a familiar dataset name does not establish the source or license of this particular copy.
