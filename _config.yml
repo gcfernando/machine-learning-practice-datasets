@@ -1,6 +1,6 @@
 # GitHub Pages documentation site; does not configure application deployment.
 url: "https://gcfernando.github.io"
-baseurl: "/datasets"
+baseurl: "/machine-learning-practice-datasets"
 title: "Machine Learning Practice Datasets"
 description: "Nine CSV datasets for machine learning practice, data cleaning, classification, regression, sentiment analysis and time-series forecasting."
 lang: "en"
@@ -24,7 +24,7 @@ defaults:
       description: "Nine CSV datasets for machine learning practice, data cleaning, classification, regression, sentiment analysis and time-series forecasting."
 
 # Public documentation navigation and presentation.
-repository: gcfernando/datasets
+repository: gcfernando/machine-learning-practice-datasets
 theme: jekyll-theme-primer
 projects_hub: https://gcfernando.github.io/gcfernando/projects/
 project_category: "Data & learning"

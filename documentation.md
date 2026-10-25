@@ -119,4 +119,4 @@ The generated page/source navigation below is retained for the documentation sit
 
 ## Explore more
 
-[All developer projects](https://gcfernando.github.io/gcfernando/projects/) · [Repository on GitHub](https://github.com/gcfernando/datasets) · [XML sitemap](https://gcfernando.github.io/datasets/sitemap.xml)
+[All developer projects](https://gcfernando.github.io/gcfernando/projects/) · [Repository on GitHub](https://github.com/gcfernando/machine-learning-practice-datasets) · [XML sitemap](https://gcfernando.github.io/machine-learning-practice-datasets/sitemap.xml)

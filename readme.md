@@ -3,6 +3,8 @@
 
 # Dataset Playground — CSV Data for Machine Learning Practice
 
+**Read online:** [Documentation website](https://gcfernando.github.io/machine-learning-practice-datasets/) · [All guides](documentation.md)
+
 Nine CSV tables for learning data cleaning, exploratory analysis, classification and regression with Python, R or another data tool.
 
 ## 🔎 Overview
@@ -50,8 +52,8 @@ Counts exclude the header. The first College column is unnamed and contains coll
 Clone the repository and load one local file:
 
 ```bash
-git clone https://github.com/gcfernando/datasets.git
-cd datasets
+git clone https://github.com/gcfernando/machine-learning-practice-datasets.git
+cd machine-learning-practice-datasets
 python -m pip install pandas
 ```
 
@@ -135,6 +137,6 @@ Keep credentials and private records out of examples and issues. Use a private r
 
 No license file or per-dataset provenance record is present in this checkout. Confirm the origin and applicable reuse rights before redistributing any file; this repository's availability does not itself grant a license.
 
-Use [repository issues](https://github.com/gcfernando/datasets/issues) for schema corrections or missing source information.
+Use [repository issues](https://github.com/gcfernando/machine-learning-practice-datasets/issues) for schema corrections or missing source information.
 
-[Schema and quality reference](documentation.md) · [Python machine-learning examples](https://github.com/gcfernando/python_codes/tree/main/ML)
+[Schema and quality reference](documentation.md) · [Python machine-learning examples](https://github.com/gcfernando/python-projects-and-examples/tree/main/ML)
