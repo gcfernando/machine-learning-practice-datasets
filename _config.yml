@@ -18,7 +18,7 @@ exclude:
   - .codex
 defaults:
   - scope:
-      path: "readme.md"
+      path: "README.md"
     values:
       title: "CSV Datasets for Machine Learning Practice"
       description: "Nine CSV datasets for machine learning practice, data cleaning, classification, regression, sentiment analysis and time-series forecasting."

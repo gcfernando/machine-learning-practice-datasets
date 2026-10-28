@@ -5,11 +5,13 @@ description: "CSV datasets for learning classification, regression, sentiment an
 permalink: /documentation/
 ---
 
+# Documentation
+
 Browse the published guides, examples and reference pages for **Machine Learning Practice Datasets**. Each guide has a readable web page; the Markdown sources remain available on GitHub.
 
 ## 🔎 Schema and quality reference
 
-Use the [README](readme.md) for dataset selection and pandas examples. This reference records the exact columns and empty-cell counts in the committed CSV files; suggested modeling targets are exercises, not an assertion that the tables are representative or well-labeled.
+Use the [README](README.md) for dataset selection and pandas examples. This reference records the exact columns and empty-cell counts in the committed CSV files; suggested modeling targets are exercises, not an assertion that the tables are representative or well-labeled.
 
 Empty-cell counts below include empty or whitespace-only field values, excluding headers. They do not count every possible missing-value marker. The additional checks below cover exact duplicate rows, selected numeric bounds and date parsing; they do not establish validity or provenance.
 

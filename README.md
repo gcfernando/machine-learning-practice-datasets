@@ -91,7 +91,7 @@ All nine CSV files live at the repository root. [documentation.md](documentation
 
 ## 🧪 Development and testing
 
-There are no committed generators, pipelines or automated tests. A safe local verification with Python's standard library is:
+There are no committed data generators, data pipelines or automated data tests; the Repository standards workflow checks metadata only. A safe local verification with Python's standard library is:
 
 ```python
 import csv
@@ -124,7 +124,7 @@ For a dataset addition or correction, record its source URL, author, license, co
 
 ## 🔒 Security
 
-Keep credentials and private records out of examples and issues. Use a private reporting option if available, or contact the maintainer privately for sensitive data concerns. No dedicated security policy is committed.
+Keep credentials and private records out of examples and issues. Use a private reporting option if available, or contact the maintainer privately for sensitive data concerns. See the [security policy](SECURITY.md) for private reporting.
 
 <a id="-related-projects"></a>
 <a id="documentation-links"></a>
@@ -140,3 +140,7 @@ No license file or per-dataset provenance record is present in this checkout. Co
 Use [repository issues](https://github.com/gcfernando/machine-learning-practice-datasets/issues) for schema corrections or missing source information.
 
 [Schema and quality reference](documentation.md) · [Python machine-learning examples](https://github.com/gcfernando/python-projects-and-examples/tree/main/ML)
+
+## Repository maintenance
+
+[Contributing](https://github.com/gcfernando/machine-learning-practice-datasets/blob/main/CONTRIBUTING.md) · [Security policy](https://github.com/gcfernando/machine-learning-practice-datasets/blob/main/SECURITY.md) · [Repository standards](https://github.com/gcfernando/machine-learning-practice-datasets/blob/main/REPOSITORY_STANDARDS.md)
