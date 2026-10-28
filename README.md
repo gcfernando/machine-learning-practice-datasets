@@ -1,7 +1,19 @@
 <a id="-summary"></a>
 <a id="️-recommended-learning-flow"></a>
 
-# Dataset Playground — CSV Data for Machine Learning Practice
+<a id="dataset-playground--csv-data-for-machine-learning-practice"></a>
+
+<div align="center" markdown="1">
+
+# CSV Datasets for Machine Learning Practice
+
+<p align="center"><strong>Explore the data. Understand its limits. Build your next exercise.</strong></p>
+
+[![Repository standards](https://github.com/gcfernando/machine-learning-practice-datasets/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/machine-learning-practice-datasets/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/machine-learning-practice-datasets/)
+
+</div>
+
+> **Start here:** [Browse datasets](#guide-features) · [Load a CSV](#guide-quick-start) · [Check data quality](#guide-development-and-testing) · [Review reuse rights](#guide-support-and-license)
 
 **Read online:** [Documentation website](https://gcfernando.github.io/machine-learning-practice-datasets/) · [All guides](documentation.md)
 
@@ -29,6 +41,8 @@ Provenance and licensing are not recorded. Treat the tables as learning material
 <a id="8-salarycsv--experience-vs-salary"></a>
 <a id="9-titaniccsv--titanic-survival-dataset"></a>
 
+<a id="guide-features"></a>
+
 ## ✨ Features
 
 | Dataset | Rows | Columns | Suggested exercise / target |
@@ -46,6 +60,8 @@ Provenance and licensing are not recorded. Treat the tables as learning material
 Counts exclude the header. The first College column is unnamed and contains college names; it is included in the 19-column count. See the [schema and quality reference](documentation.md) for exact fields and empty-cell counts.
 
 <a id="-quick-start-with-pandas"></a>
+
+<a id="guide-quick-start"></a>
 
 ## 🚀 Quick start
 
@@ -89,6 +105,8 @@ For experiments, split training and evaluation data before fitting imputers, sca
 
 All nine CSV files live at the repository root. [documentation.md](documentation.md) is a data dictionary and quality reference. `_config.yml`, `_layouts` and `assets` support the documentation site; they are unrelated to data processing.
 
+<a id="guide-development-and-testing"></a>
+
 ## 🧪 Development and testing
 
 There are no committed data generators, data pipelines or automated data tests; the Repository standards workflow checks metadata only. A safe local verification with Python's standard library is:
@@ -128,6 +146,8 @@ Keep credentials and private records out of examples and issues. Use a private r
 
 <a id="-related-projects"></a>
 <a id="documentation-links"></a>
+
+<a id="guide-support-and-license"></a>
 
 ## 📄 Support and license
 

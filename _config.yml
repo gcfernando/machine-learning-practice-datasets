@@ -21,7 +21,7 @@ defaults:
       path: "README.md"
     values:
       title: "CSV Datasets for Machine Learning Practice"
-      description: "Nine CSV datasets for machine learning practice, data cleaning, classification, regression, sentiment analysis and time-series forecasting."
+      description: "Practice data cleaning, exploratory analysis, classification and regression with nine CSV datasets, schema notes and Python examples. Review provenance limits."
 
 # Public documentation navigation and presentation.
 repository: gcfernando/machine-learning-practice-datasets
