@@ -1,49 +1,16 @@
-<a id="-summary"></a>
-<a id="️-recommended-learning-flow"></a>
+# CSV datasets for machine-learning practice
 
-<a id="dataset-playground--csv-data-for-machine-learning-practice"></a>
-
-<div align="center" markdown="1">
-
-# CSV Datasets for Machine Learning Practice
-
-<p align="center"><strong>Explore the data. Understand its limits. Build your next exercise.</strong></p>
+Nine CSV tables for practicing data cleaning, exploratory analysis, classification and regression.
 
 [![Repository standards](https://github.com/gcfernando/machine-learning-practice-datasets/actions/workflows/repository-standards.yml/badge.svg)](https://github.com/gcfernando/machine-learning-practice-datasets/actions/workflows/repository-standards.yml) [![Read the documentation](https://img.shields.io/badge/Read-the_documentation-2563eb?style=flat-square)](https://gcfernando.github.io/machine-learning-practice-datasets/)
 
-</div>
+Use these files with Python, R or a spreadsheet tool. The repository provides practice inputs; it includes no trained models, notebooks, generators or evaluation results. Dataset provenance and licensing are unrecorded, so confirm source and reuse rights before redistribution.
 
-> **Start here:** [Browse datasets](#guide-features) · [Load a CSV](#guide-quick-start) · [Check data quality](#guide-development-and-testing) · [Review reuse rights](#guide-support-and-license)
+## Start here
 
-**Read online:** [Documentation website](https://gcfernando.github.io/machine-learning-practice-datasets/) · [All guides](documentation.md)
+Choose **Iris** for a first classification exercise or **Salary** for regression. Use **Purchase** and **Titanic** to explore missing values, then try the larger customer, sales, review and sensor tables. Follow the quick-start example below to load a local CSV. The [schema and quality reference](documentation.md) lists exact fields and known limitations.
 
-Nine CSV tables for learning data cleaning, exploratory analysis, classification and regression with Python, R or another data tool.
-
-## 🔎 Overview
-
-Start with Iris for classification or Salary for regression, then explore missing values in Titanic and the customer, sales and sensor tables. These files provide practice inputs; the repository includes no trained models, notebooks or evaluation results.
-
-Provenance and licensing are not recorded. Treat the tables as learning material of unverified origin and read the [source and reuse notes](#source-and-reuse-notes) before redistribution.
-
-<a id="-dataset-catalog"></a>
-<a id="-dataset-playground--machine-learning-datasets-for-practice-csv"></a>
-<a id="-detailed-dataset-overview"></a>
-<a id="-size-at-a-glance"></a>
-<a id="-suggested-use-cases"></a>
-<a id="-whats-inside"></a>
-<a id="1-customer_datacsv--customer-spending-data"></a>
-<a id="2-sales_datacsv--sales-transactions"></a>
-<a id="3-reviews_datacsv--product-reviews"></a>
-<a id="4-sensor_datacsv--sensor-readings"></a>
-<a id="5-collegecsv--college-data"></a>
-<a id="6-iriscsv--iris-flower-dataset"></a>
-<a id="7-purchasecsv--purchase-decision-dataset"></a>
-<a id="8-salarycsv--experience-vs-salary"></a>
-<a id="9-titaniccsv--titanic-survival-dataset"></a>
-
-<a id="guide-features"></a>
-
-## ✨ Features
+## Dataset catalog
 
 | Dataset | Rows | Columns | Suggested exercise / target |
 |---|---:|---:|---|
@@ -63,7 +30,7 @@ Counts exclude the header. The first College column is unnamed and contains coll
 
 <a id="guide-quick-start"></a>
 
-## 🚀 Quick start
+## Quick start
 
 Clone the repository and load one local file:
 
@@ -81,11 +48,11 @@ print(iris.shape)  # (150, 5)
 print(iris.columns.tolist())
 ```
 
-## 📦 Prerequisites and installation
+## Prerequisites and installation
 
 The CSV files require no runtime installation. For the examples above, use Python with pandas installed in your chosen environment. Python and pandas versions are not pinned in this repository. Spreadsheet tools and R can also import the tables; preserve exact filename case when scripting on case-sensitive systems.
 
-## 💡 Usage
+## Usage
 
 Inspect missing values and load college names as an index:
 
@@ -101,13 +68,10 @@ print(titanic.isna().sum())
 
 For experiments, split training and evaluation data before fitting imputers, scalers or encoders. For sensor time-series exercises, first inspect ordering, duplicate timestamps and sampling intervals; the presence of a timestamp column alone does not establish suitability for forecasting. Avoid using identifiers, names, email addresses or phone numbers as default predictive features.
 
-## 🏗️ Architecture
-
-All nine CSV files live at the repository root. [documentation.md](documentation.md) is a data dictionary and quality reference. `_config.yml`, `_layouts` and `assets` support the documentation site; they are unrelated to data processing.
 
 <a id="guide-development-and-testing"></a>
 
-## 🧪 Development and testing
+## Development and testing
 
 There are no committed data generators, data pipelines or automated data tests; the Repository standards workflow checks metadata only. A safe local verification with Python's standard library is:
 
@@ -127,7 +91,7 @@ The documentation review parsed every record to verify widths, counts, headers, 
 
 <a id="-faq"></a>
 
-## 🛠️ Troubleshooting and limitations
+## Troubleshooting and limitations
 
 - **Unnamed College column:** use `index_col=0`, or assign an explicit name after import.
 - **Missing values:** Purchase, Titanic, customer, sales and sensor tables contain empty cells. Define a preprocessing policy before modeling.
@@ -136,20 +100,17 @@ The documentation review parsed every record to verify widths, counts, headers, 
 - **Unknown origin:** apparent generated patterns do not prove that data is synthetic. No real-world representativeness or label quality is established.
 - **Reuse rights:** a familiar dataset name does not establish the source or license of this particular copy.
 
-## 🤝 Contributing
+## Contributing
 
-For a dataset addition or correction, record its source URL, author, license, collection/generation method, schema, units and known quality limitations. Do not add personal or confidential records. Update counts and the data dictionary when changing a CSV.
+For a dataset addition or correction, record its source URL, author, license, collection/generation method, schema, units and known quality limitations. Do not add personal or confidential records. Update counts and the data dictionary when changing a CSV. Follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [repository standards](REPOSITORY_STANDARDS.md); report sensitive findings through the [security policy](SECURITY.md).
 
-## 🔒 Security
-
-Keep credentials and private records out of examples and issues. Use a private reporting option if available, or contact the maintainer privately for sensitive data concerns. See the [security policy](SECURITY.md) for private reporting.
 
 <a id="-related-projects"></a>
 <a id="documentation-links"></a>
 
 <a id="guide-support-and-license"></a>
 
-## 📄 Support and license
+## Support and license
 
 <a id="source-and-reuse-notes"></a>
 
@@ -161,6 +122,35 @@ Use [repository issues](https://github.com/gcfernando/machine-learning-practice-
 
 [Schema and quality reference](documentation.md) · [Python machine-learning examples](https://github.com/gcfernando/python-projects-and-examples/tree/main/ML)
 
-## Repository maintenance
-
-[Contributing](https://github.com/gcfernando/machine-learning-practice-datasets/blob/main/CONTRIBUTING.md) · [Security policy](https://github.com/gcfernando/machine-learning-practice-datasets/blob/main/SECURITY.md) · [Repository standards](https://github.com/gcfernando/machine-learning-practice-datasets/blob/main/REPOSITORY_STANDARDS.md)
+<!-- Preserve links to earlier README sections. -->
+<a id="-architecture"></a>
+<a id="-contributing"></a>
+<a id="-dataset-catalog"></a>
+<a id="-dataset-playground--machine-learning-datasets-for-practice-csv"></a>
+<a id="-detailed-dataset-overview"></a>
+<a id="-development-and-testing"></a>
+<a id="-features"></a>
+<a id="-overview"></a>
+<a id="-prerequisites-and-installation"></a>
+<a id="-quick-start"></a>
+<a id="️-recommended-learning-flow"></a>
+<a id="-security"></a>
+<a id="-size-at-a-glance"></a>
+<a id="-suggested-use-cases"></a>
+<a id="-summary"></a>
+<a id="-support-and-license"></a>
+<a id="-troubleshooting-and-limitations"></a>
+<a id="-usage"></a>
+<a id="-whats-inside"></a>
+<a id="1-customer_datacsv--customer-spending-data"></a>
+<a id="2-sales_datacsv--sales-transactions"></a>
+<a id="3-reviews_datacsv--product-reviews"></a>
+<a id="4-sensor_datacsv--sensor-readings"></a>
+<a id="5-collegecsv--college-data"></a>
+<a id="6-iriscsv--iris-flower-dataset"></a>
+<a id="7-purchasecsv--purchase-decision-dataset"></a>
+<a id="8-salarycsv--experience-vs-salary"></a>
+<a id="9-titaniccsv--titanic-survival-dataset"></a>
+<a id="dataset-playground--csv-data-for-machine-learning-practice"></a>
+<a id="guide-features"></a>
+<a id="repository-maintenance"></a>
